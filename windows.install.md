@@ -1,6 +1,13 @@
 # Setup Guide for Free AI LeetCode Solver - Windows
 This guide will help you set up and use the Free AI LeetCode Solver with ease. Follow the instructions to get everything running smoothly.
 
+## Clone the repo:
+
+```bash
+git clone https://github.com/algorithmspath-com/free-ai-leetcode-solver.git
+cd free-ai-leetcode-solver
+```
+
 ## Directory Structure
 
 Make sure your project directory is structured as follows:
