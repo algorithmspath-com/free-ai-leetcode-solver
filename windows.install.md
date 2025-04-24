@@ -45,7 +45,7 @@ To start the backend engine:
 2. Execute the following command:
 
    ```bash
-   start /b AssistServer.exe config.py
+   path_of_AssistServer.exe path_of_config.py
    ```
 
 This command launches the FastAPI server which will handle the requests from the client.
