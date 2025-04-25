@@ -28,7 +28,7 @@ Make sure your project directory is structured as follows:
 
 ```
 windows/
-    ├── AssistServer/                   # Backend engine
+    ├── server/                   # Backend engine
     ├── Tesseract/                      # OCR magic
     └── client/                         # Launcher
 config.py                               # Configuration file
