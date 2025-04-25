@@ -9,25 +9,7 @@ git clone https://github.com/algorithmspath-com/free-ai-leetcode-solver.git
 cd free-ai-leetcode-solver
 ```
 
-## Step 1: Define the Configuration File
-
-Create a `config.py` file in the root of your project directory with the following content:
-
-```python
-{
-  "openai_api_key": "my_openai_api_key",  # Replace with your OpenAI API key
-  "tesseract_cmd": "C:/Tesseract/tesseract.exe",  # Path to the Tesseract executable
-  "host": "0.0.0.0",  # Host for the FastAPI server
-  "port": 10010  # Port for the FastAPI server
-}
-```
-
-### Notes:
-
-- Make sure to replace `"my_openai_api_key"` with your actual OpenAI API key.
-- Ensure that the path to `tesseract.exe` is correct based on your Tesseract installation.
-
-## Step 2: Extract the windows software
+## Step 1: Extract the windows software
 
 open the terminal and write command:
 
@@ -51,6 +33,24 @@ windows/
     └── client/     # Launcher
 config.py                               # Configuration file
 ```
+
+## Step 2: Define the Configuration File
+
+Create a `config.py` file in the root of your project directory with the following content:
+
+```python
+{
+  "openai_api_key": "my_openai_api_key",  # Replace with your OpenAI API key
+  "tesseract_cmd": "C:/Tesseract/tesseract.exe",  # Path to the Tesseract executable
+  "host": "0.0.0.0",  # Host for the FastAPI server
+  "port": 10010  # Port for the FastAPI server
+}
+```
+
+### Notes:
+
+- Make sure to replace `"my_openai_api_key"` with your actual OpenAI API key.
+- Ensure that the path to `tesseract.exe` is correct based on your Tesseract installation.
 
 ## Step 3: Start the Backend Server
 
