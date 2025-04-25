@@ -1,4 +1,5 @@
 # Setup Guide for Free AI LeetCode Solver - Windows
+
 This guide will help you set up and use the Free AI LeetCode Solver with ease. Follow the instructions to get everything running smoothly.
 
 ## Clone the repo:
@@ -34,10 +35,23 @@ Create a `config.py` file in the root of your project directory with the followi
 ```
 
 ### Notes:
+
 - Make sure to replace `"my_openai_api_key"` with your actual OpenAI API key.
 - Ensure that the path to `tesseract.exe` is correct based on your Tesseract installation.
 
-## Step 2: Start the Backend Server
+## Step 2: Extract the window/
+
+open the terminal and write command:
+
+```python
+python chunk_zipper.py extract ./win_c ./window
+```
+
+### Notes:
+
+* If there is any issue with this you can try 7zip it works good for windows
+
+## Step 3: Start the Backend Server
 
 To start the backend engine:
 
@@ -45,18 +59,18 @@ To start the backend engine:
 2. Execute the following command:
 
    ```bash
-   start /b AssistServer.exe config.py
+   path_AssistServer.exe path_config.py
    ```
 
 This command launches the FastAPI server which will handle the requests from the client.
 
-## Step 3: Start the Client Application
+## Step 4: Start the Client Application
 
 After the server is running, you can launch the client:
 
 1. Run the `free-ai-leetcode-solver.exe` by double-clicking it or using the command prompt.
 
-## Step 4: Usage Instructions
+## Step 5: Usage Instructions
 
 Once both the server and client are running, you can use the application with the following keyboard shortcuts:
 
