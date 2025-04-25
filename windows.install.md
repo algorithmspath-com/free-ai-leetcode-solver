@@ -9,18 +9,6 @@ git clone https://github.com/algorithmspath-com/free-ai-leetcode-solver.git
 cd free-ai-leetcode-solver
 ```
 
-## Directory Structure
-
-Make sure your project directory is structured as follows:
-
-```
-windows/
-    ├── AssistServer/                   # Backend engine
-    ├── Tesseract/                      # OCR magic
-    └── free-ai-leetcode-solver.exe      # Launcher
-config.py                               # Configuration file
-```
-
 ## Step 1: Define the Configuration File
 
 Create a `config.py` file in the root of your project directory with the following content:
@@ -39,17 +27,30 @@ Create a `config.py` file in the root of your project directory with the followi
 - Make sure to replace `"my_openai_api_key"` with your actual OpenAI API key.
 - Ensure that the path to `tesseract.exe` is correct based on your Tesseract installation.
 
-## Step 2: Extract the window/
+## Step 2: Extract the windows software
 
 open the terminal and write command:
 
 ```python
-python chunk_zipper.py extract ./win_c ./window
+python chunk_zipper.py extract ./win_c ./windows
 ```
 
 ### Notes:
 
 * If there is any issue with this you can try 7zip it works good for windows
+
+
+## Directory Structure
+
+Make sure your project directory is structured as follows:
+
+```
+windows/
+    ├── AssistServer/                   # Backend engine
+    ├── Tesseract/                      # OCR magic
+    └── client/     # Launcher
+config.py                               # Configuration file
+```
 
 ## Step 3: Start the Backend Server
 
@@ -57,10 +58,20 @@ To start the backend engine:
 
 1. Navigate to the `AssistServer` directory in your terminal or command prompt.
 2. Execute the following command:
+   
+Option 1:
 
-   ```bash
-   path_AssistServer.exe path_config.py
-   ```
+```bash
+path_AssistServer.exe path_config.py
+```
+
+👉 Option 2: Run in Background with Hidden Window (PowerShell)
+
+```powershell
+Start-Process -FilePath "path_AssistServer.exe" -ArgumentList "path_config.py" -WindowStyle Hidden
+```
+
+This starts the process without needing terminal window open.
 
 This command launches the FastAPI server which will handle the requests from the client.
 
@@ -68,7 +79,7 @@ This command launches the FastAPI server which will handle the requests from the
 
 After the server is running, you can launch the client:
 
-1. Run the `free-ai-leetcode-solver.exe` by double-clicking it or using the command prompt.
+1. Run the `client/free-ai-leetcode-solver.exe` by double-clicking it or using the command prompt.
 
 ## Step 5: Usage Instructions
 
